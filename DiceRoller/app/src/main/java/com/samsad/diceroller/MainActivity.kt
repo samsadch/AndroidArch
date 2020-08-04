@@ -14,9 +14,10 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        binding.rollButton.text = "Let's Roll"
 
         binding.rollButton.setOnClickListener {
-            Toast.makeText(this,"samsad",Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "button clicked", Toast.LENGTH_SHORT).show()
         }
     }
 }
