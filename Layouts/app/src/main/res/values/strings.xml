@@ -2,4 +2,7 @@
     <string name="app_name">Layouts</string>
     <string name="name">Samsad CV</string>
     <string name="yellow_star">Yellow Star</string>
+    <string name="bio_text">Samsad CV I am an Android developer with commitment and experience of developing innovative and creative software solutions. I am an Android developer with commitment and experience of developing innovative and creative software solutions. I am an Android developer with commitment and experience of developing innovative and creative software solutions. I am an Android developer with commitment and experience of developing innovative and creative software solutions. I am an Android developer with commitment and experience of developing innovative and creative software solutions. I am an Android developer with commitment and experience of developing innovative and creative software solutions. I am an Android developer with commitment and experience of developing innovative and creative software solutions.I am an Android developer with commitment and experience of developing innovative and creative software solutions.</string>
+    <string name="enter_nickname">Enter your Nickname</string>
+    <string name="done">Done</string>
 </resources>
