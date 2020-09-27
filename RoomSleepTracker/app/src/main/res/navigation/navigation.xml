@@ -10,5 +10,24 @@
         android:id="@+id/sleepTrackerFragment"
         android:name="com.samsad.roomsleeptracker.ui.sleeptracker.SleepTrackerFragment"
         android:label="@string/sleep_tracker_fragment"
-        tools:layout="@layout/sleep_tracker_fragment" />
+        tools:layout="@layout/sleep_tracker_fragment" >
+        <action
+            android:id="@+id/action_sleepTrackerFragment_to_sleepQualityFragment"
+            app:destination="@id/sleepQualityFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/sleepQualityFragment"
+        tools:layout="@layout/sleep_quality_fragment"
+        android:name="com.samsad.roomsleeptracker.ui.sleepquality.SleepQualityFragment"
+        android:label="@string/sleep_quality_fragment" >
+        <argument
+            android:name="sleepNightKey"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_sleepQualityFragment_to_sleepTrackerFragment"
+            app:destination="@id/sleepTrackerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

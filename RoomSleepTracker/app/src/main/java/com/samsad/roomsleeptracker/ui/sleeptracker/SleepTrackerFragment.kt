@@ -11,7 +11,6 @@ import com.samsad.roomsleeptracker.databinding.SleepTrackerFragmentBinding
 
 class SleepTrackerFragment : Fragment() {
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -22,6 +21,5 @@ class SleepTrackerFragment : Fragment() {
 
         return binding.root
     }
-
 
 }
