@@ -15,6 +15,7 @@ import java.io.IOException
 
 @RunWith(AndroidJUnit4::class)
 class SleepDatabaseTest {
+
     private lateinit var sleepDao: SleepDatabaseDao
     private lateinit var db: SleepDatabase
 
@@ -44,6 +45,5 @@ class SleepDatabaseTest {
         val tonight = sleepDao.getTonight()
         assertEquals(tonight?.sleepQuality, -1)
     }
-
 
 }

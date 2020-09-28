@@ -16,5 +16,8 @@ data class SleepNight(
     var endTimeInMilli: Long = startTimeInMilli,
 
     @ColumnInfo(name = "quality_rating")
-    var sleepQuality: Int = -1
+    var sleepQuality: Int = -1,
+
+    @ColumnInfo(name = "sleep_duration")
+    var sleepDuration: Int = 0
 )

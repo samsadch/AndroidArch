@@ -1,4 +1,4 @@
-package com.samsad.roomsleeptracker.ui.sleepquality
+package com.samsad.roomsleeptracker.sleepquality
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -22,6 +22,7 @@ class SleepQualityFragment : Fragment() {
         )
 
         val application = requireNotNull(this.activity).application
+        val arguments = SleepQualityFragmentArgs.fromBundle(arguments!!)
 
         return binding.root
     }

@@ -4,11 +4,17 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.migration.Migration
+import androidx.sqlite.db.SupportSQLiteDatabase
 
 @Database(entities = [SleepNight::class], version = 1, exportSchema = false)
 abstract class SleepDatabase : RoomDatabase() {
 
     abstract val sleepDatabaseDao: SleepDatabaseDao
+
+    /* database.execSQL("CREATE TABLE `Fruit` (`id` INTEGER, `name` TEXT, " +
+                "PRIMARY KEY(`id`))")*/
+
 
     companion object {
         //Volatile keyword will help to get values from memory and block caching
@@ -22,12 +28,18 @@ abstract class SleepDatabase : RoomDatabase() {
             synchronized(this) {
                 var instance = INSTANCE
 
+                val MIGRATION_1_2 = object : Migration(1, 2) {
+                    override fun migrate(database: SupportSQLiteDatabase) {
+                        database.execSQL("ALTER TABLE daily_sleep_quality_table ADD COLUMN sleep_duration INTEGER")
+                    }
+                }
+
                 if (instance == null) {
                     instance = Room.databaseBuilder(
                         context.applicationContext,
                         SleepDatabase::class.java,
                         "sleep_history_database"
-                    ).fallbackToDestructiveMigration()
+                    ).addMigrations(MIGRATION_1_2)
                         .build()
                     INSTANCE = instance
                 }

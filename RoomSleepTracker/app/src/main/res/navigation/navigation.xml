@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/sleepTrackerFragment"
-        android:name="com.samsad.roomsleeptracker.ui.sleeptracker.SleepTrackerFragment"
+        android:name="com.samsad.roomsleeptracker.sleeptracker.SleepTrackerFragment"
         android:label="@string/sleep_tracker_fragment"
         tools:layout="@layout/sleep_tracker_fragment" >
         <action
@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/sleepQualityFragment"
         tools:layout="@layout/sleep_quality_fragment"
-        android:name="com.samsad.roomsleeptracker.ui.sleepquality.SleepQualityFragment"
+        android:name="com.samsad.roomsleeptracker.sleepquality.SleepQualityFragment"
         android:label="@string/sleep_quality_fragment" >
         <argument
             android:name="sleepNightKey"
