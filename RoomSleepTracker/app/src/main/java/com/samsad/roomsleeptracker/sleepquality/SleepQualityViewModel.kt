@@ -18,6 +18,10 @@ class SleepQualityViewModel(
     val navigateToSleepTracker: LiveData<Boolean?>
         get() = _navigateToSleepTracker
 
+    fun doneNavigating() {
+        _navigateToSleepTracker.value = null
+    }
+
 
     fun onSetSleepQuality(quality: Int) {
         uiScope.launch {
