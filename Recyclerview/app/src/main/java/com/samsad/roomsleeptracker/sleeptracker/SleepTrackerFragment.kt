@@ -13,6 +13,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.samsad.roomsleeptracker.R
 import com.samsad.roomsleeptracker.database.SleepDatabase
 import com.samsad.roomsleeptracker.databinding.SleepTrackerFragmentBinding
+import com.samsad.roomsleeptracker.sleeptracker.adapter.SleepNightAdapterDataRefresh
 
 class SleepTrackerFragment : Fragment() {
 
@@ -38,12 +39,14 @@ class SleepTrackerFragment : Fragment() {
 
         binding.lifecycleOwner = this
 
-        val adapter = SleepNightAdapter()
+        val adapter =
+            SleepNightAdapterDataRefresh()
         binding.sleepRcv.adapter = adapter
 
         sleepTrackerViewModel.nights.observe(viewLifecycleOwner, Observer {
             it?.let {
-                adapter.data = it
+                //adapter.data = it
+                adapter.submitList(it)
             }
         })
 
