@@ -132,4 +132,18 @@ class SleepTrackerViewModel(
             database.clear()
         }
     }
+
+    private val _navigateToDetail = MutableLiveData<Long>()
+
+    val navigateToDetail: LiveData<Long>
+        get() = _navigateToDetail
+
+    fun onSleepItemClicked(id: Long) {
+        _navigateToDetail.value = id
+    }
+
+    fun onSleepItemDetailNavigated() {
+        _navigateToDetail.value = null
+    }
+
 }
