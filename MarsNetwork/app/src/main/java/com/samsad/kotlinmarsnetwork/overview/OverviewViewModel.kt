@@ -36,7 +36,7 @@ class OverviewViewModel : ViewModel() {
         MarsAPI.retrofitService.getProperties().enqueue(object : Callback<List<MarsProperty>> {
 
             override fun onResponse(call: Call<List<MarsProperty>>, response: Response<List<MarsProperty>>) {
-                _response.value = "We have "+response.body()?.size+" items"
+                _response.value = "Success: ${response.body()?.size} Mars properties retrieved"
             }
 
             override fun onFailure(call: Call<List<MarsProperty>>, t: Throwable) {
