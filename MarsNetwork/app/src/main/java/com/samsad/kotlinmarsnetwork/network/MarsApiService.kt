@@ -1,5 +1,7 @@
 package com.samsad.kotlinmarsnetwork.network
 
+import com.bosphere.filelogger.FL
+import com.samsad.kotlinmarsnetwork.MainActivity.Companion.TAG
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Call
@@ -37,6 +39,7 @@ interface MarsApiService {
  * */
 object MarsAPI {
     val retrofitService: MarsApiService by lazy {
+        FL.d(TAG, " Called for retrofit Service")
         retrofit.create(MarsApiService::class.java)
     }
 }
