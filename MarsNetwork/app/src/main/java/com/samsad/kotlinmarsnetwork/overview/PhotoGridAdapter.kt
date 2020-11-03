@@ -3,21 +3,12 @@ package com.samsad.kotlinmarsnetwork.overview
 import android.widget.ImageView
 import androidx.core.net.toUri
 import androidx.databinding.BindingAdapter
+import androidx.recyclerview.widget.ListAdapter
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.samsad.kotlinmarsnetwork.R
+import com.samsad.kotlinmarsnetwork.network.MarsProperty
 
-@BindingAdapter("imageUrl")
-fun bindImage(imageView: ImageView, imageUrl: String?) {
-    imageUrl?.let {
-        val uri = it.toUri().buildUpon().scheme("https").build()
-        Glide.with(imageView.context)
-            .load(uri)
-            .apply(
-                RequestOptions()
-                    .placeholder(R.drawable.loading_animation)
-                    .error(R.drawable.ic_broken_image)
-            )
-            .into(imageView)
-    }
+class PhotoGridAdapter :ListAdapter<MarsProperty,PhotoGridAdapter.MarsPropertyViewHolder>(DiffCallback){
+    
 }
