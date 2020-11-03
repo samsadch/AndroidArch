@@ -102,7 +102,4 @@ dependencies {
     //File Log
     implementation 'com.github.bosphere.android-filelogger:filelogger:1.0.7'
 
-
-
-
 }
