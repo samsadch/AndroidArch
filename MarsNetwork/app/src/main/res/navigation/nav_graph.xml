@@ -20,6 +20,10 @@
         android:id="@+id/detailFragment"
         android:name="com.samsad.kotlinmarsnetwork.detail.DetailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail"></fragment>
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="selectedProperty"
+            app:argType="@string/mars_property" />
+    </fragment>
 
 </navigation>
