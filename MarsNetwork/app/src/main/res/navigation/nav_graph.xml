@@ -23,7 +23,7 @@
         tools:layout="@layout/fragment_detail">
         <argument
             android:name="selectedProperty"
-            app:argType="@string/mars_property" />
+            app:argType="com.samsad.kotlinmarsnetwork.network.MarsProperty" />
     </fragment>
 
 </navigation>

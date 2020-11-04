@@ -3,7 +3,9 @@ package com.samsad.kotlinmarsnetwork.overview
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.samsad.kotlinmarsnetwork.R
 import com.samsad.kotlinmarsnetwork.databinding.FragmentOverviewBinding
 
@@ -36,6 +38,13 @@ class OverviewFragment : Fragment() {
         binding.viewModel = viewModel
         binding.photoGrifRcv.adapter = PhotoGridAdapter(PhotoGridAdapter.OnCLickListener {
             viewModel.displayPropertyDetail(it)
+        })
+
+        viewModel.navigateToSelectedProperty.observe(viewLifecycleOwner, Observer {
+            if (null != it) {
+                this.findNavController().navigate(OverviewFragmentDirections.actionShowDetail(it))
+                viewModel.displayPropertyDetailComplete()
+            }
         })
         setHasOptionsMenu(true)
         return binding.root
