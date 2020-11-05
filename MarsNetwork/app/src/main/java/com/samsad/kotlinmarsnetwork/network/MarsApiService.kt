@@ -8,8 +8,11 @@ import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Query
 
 private const val BASE_URL = "https://mars.udacity.com/"
+
+enum class MarsApiFilter(val value: String) { SHOW_RENT("rent"), SHOW_BUY("buy"), SHOW_ALL("all") }
 
 /**In order for Moshi's annotations work properly with Kotlin
  * we need to add kotlin Json adapter factory*/
@@ -31,7 +34,7 @@ interface MarsApiService {
     /**Call object is used to start the request, to create a retrofit service you call
      * retrofit.create() passing service interface API*/
     @GET("realestate")
-    fun getProperties(): Call<List<MarsProperty>>
+    fun getProperties(@Query("filter") type: String): Call<List<MarsProperty>>
 }
 
 /** Since retrofit create call is expensive our app only need one retrofit service
