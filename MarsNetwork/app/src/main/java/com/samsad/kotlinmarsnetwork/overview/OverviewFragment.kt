@@ -46,6 +46,7 @@ class OverviewFragment : Fragment() {
                 viewModel.displayPropertyDetailComplete()
             }
         })
+        
         setHasOptionsMenu(true)
         return binding.root
     }
