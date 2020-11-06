@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/devByte"
+    android:id="@+id/nav_graph">
+
+    <fragment
+        android:id="@+id/devByte"
+        android:name="com.samsad.devbitebackground.ui.DevByteFragment"
+        android:label="fragment_dev_byte"
+        tools:layout="@layout/fragment_dev_byte" />
 
 </navigation>

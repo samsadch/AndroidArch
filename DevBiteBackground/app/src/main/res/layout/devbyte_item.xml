@@ -8,11 +8,11 @@
 
         <variable
             name="video"
-            type="com.example.android.devbyteviewer.domain.Video" />
+            type="com.samsad.devbitebackground.domain.Video" />
 
         <variable
             name="videoCallback"
-            type="com.example.android.devbyteviewer.ui.VideoClick" />
+            type="com.samsad.devbitebackground.ui.VideoClick" />
     </data>
 
     <com.google.android.material.card.MaterialCardView

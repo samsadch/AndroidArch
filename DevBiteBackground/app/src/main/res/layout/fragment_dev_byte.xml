@@ -25,7 +25,7 @@
 
         <variable
             name="viewModel"
-            type="com.example.android.devbyteviewer.viewmodels.DevByteViewModel" />
+            type="com.samsad.devbitebackground.viewmodels.DevByteViewModel" />
     </data>
 
     <FrameLayout
