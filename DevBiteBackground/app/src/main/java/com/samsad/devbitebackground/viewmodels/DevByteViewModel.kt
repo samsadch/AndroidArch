@@ -14,19 +14,11 @@ import java.io.IOException
  * work such as fetching network results can continue through configuration changes and deliver
  * results after the new Fragment or Activity is available.
  *
- * @param application The application that this viewmodel is attached to, it's safe to hold a
+ * @param application The application that this [DevByteViewModel] is attached to, it's safe to hold a
  * reference to applications across rotation since Application is never recreated during actiivty
  * or fragment lifecycle events.
  */
 class DevByteViewModel(application: Application) : AndroidViewModel(application) {
-
-    /**
-     *
-     */
-
-    /**
-     *
-     */
 
     /**
      * A playlist of videos that can be shown on the screen. This is private to avoid exposing a
@@ -61,9 +53,6 @@ class DevByteViewModel(application: Application) : AndroidViewModel(application)
             // challenge exercise: show an error to the user if the network request fails
         }
     }
-
-    /**
-     */
 
     /**
      * Factory for constructing DevByteViewModel with parameter
