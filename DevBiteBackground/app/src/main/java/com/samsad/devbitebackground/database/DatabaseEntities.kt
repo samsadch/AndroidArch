@@ -4,8 +4,6 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.samsad.devbitebackground.domain.Video
 
-// TODO (01) Create the DatabaseEntities class, adding annotations for the class and the primary key.
-
 @Entity
 data class DatabaseVideo(
     @PrimaryKey
@@ -16,7 +14,6 @@ data class DatabaseVideo(
     val thumbnail: String
 )
 
-// TODO (02) Define extension function List<DatabaseVideo>.asDomainModel(), that returns
 // a list of <Video>.
 fun List<DatabaseVideo>.asDomainModel(): List<Video> {
     return map {
