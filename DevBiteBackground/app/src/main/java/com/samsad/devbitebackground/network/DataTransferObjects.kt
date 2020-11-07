@@ -1,5 +1,6 @@
 package com.samsad.devbitebackground.network
 
+import com.samsad.devbitebackground.database.DatabaseVideo
 import com.samsad.devbitebackground.domain.Video
 import com.squareup.moshi.JsonClass
 
@@ -11,6 +12,7 @@ import com.squareup.moshi.JsonClass
 
 // TODO (03) Define extension function NetworkVideoHolder.asDatabaseModel(),
 // that returns an array of <DatabaseVideo>.
+
 
 /**
  * VideoHolder holds a list of Videos.
@@ -50,4 +52,17 @@ fun NetworkVideoContainer.asDomainModel(): List<Video> {
             thumbnail = it.thumbnail
         )
     }
+}
+
+/** Converts data transfer object to Database Objects */
+fun NetworkVideoContainer.asDatabaseModel(): Array<DatabaseVideo> {
+    return videos.map {
+        DatabaseVideo(
+            title = it.title,
+            description = it.description,
+            url = it.url,
+            updated = it.updated,
+            thumbnail = it.thumbnail
+        )
+    }.toTypedArray()
 }
