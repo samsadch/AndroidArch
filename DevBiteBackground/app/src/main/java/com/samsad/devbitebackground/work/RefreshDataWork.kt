@@ -11,6 +11,10 @@ import com.samsad.devbitebackground.repository.VideosRepository
 class RefreshDataWork(appContext: Context, params: WorkerParameters) :
     CoroutineWorker(appContext, params) {
 
+    companion object{
+        const val WORK_NAME = "RefreshDataWork"
+    }
+
     //Our worker will run until do work is returns the result
     //eg:acess network, write to DB and Workmanger make sure
     //the OS doesn't interrupt our work.
