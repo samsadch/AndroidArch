@@ -7,10 +7,10 @@
     <data>
         <variable
                 name="chapter"
-                type="com.example.android.gdgfinder.network.GdgChapter"/>
+                type="com.samsad.gdgfinder.networdk.GdgChapter"/>
         <variable
                 name="clickListener"
-                type="com.example.android.gdgfinder.search.GdgClickListener"/>
+                type="com.samsad.gdgfinder.search.GdgClickListener"/>
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

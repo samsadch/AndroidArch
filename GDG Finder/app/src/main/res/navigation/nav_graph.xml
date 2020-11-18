@@ -6,7 +6,7 @@
 
     <fragment
             android:id="@+id/gdg_search"
-            android:name="com.example.android.gdgfinder.search.GdgListFragment"
+            android:name="com.samsad.gdgfinder.search.GdgListFragment"
             android:label="GDG Search">
     </fragment>
     <fragment android:id="@+id/home" android:name="com.example.android.gdgfinder.home.HomeFragment"
