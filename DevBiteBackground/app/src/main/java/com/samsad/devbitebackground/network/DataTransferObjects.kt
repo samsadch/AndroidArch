@@ -9,8 +9,6 @@ import com.squareup.moshi.JsonClass
  * or formatting objects to send to the server. You should convert these to domain objects before
  * using them.
  */
-
-// TODO (03) Define extension function NetworkVideoHolder.asDatabaseModel(),
 // that returns an array of <DatabaseVideo>.
 
 
