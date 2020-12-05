@@ -1,8 +1,11 @@
 package com.samsad.gdgfinder
 
+
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
@@ -24,6 +27,11 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         setupNavigation()
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            //Turn dark mode on
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        }
     }
 
     /**
@@ -40,10 +48,10 @@ class MainActivity : AppCompatActivity() {
         // first find the nav controller
         val navController = findNavController(R.id.nav_host_fragment)
 
-        setSupportActionBar(binding.toolbar)
+        //setSupportActionBar(binding.toolbar)
 
         // then setup the action bar, tell it about the DrawerLayout
-        setupActionBarWithNavController(navController, binding.drawerLayout)
+        //setupActionBarWithNavController(navController, binding.drawerLayout)
 
 
         // finally setup the left drawer (called a NavigationView)

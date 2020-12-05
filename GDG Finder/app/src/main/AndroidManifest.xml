@@ -17,7 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GDGFinder"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.GDGFinder">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

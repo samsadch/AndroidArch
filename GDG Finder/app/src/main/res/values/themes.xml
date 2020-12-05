@@ -11,13 +11,17 @@
         <item name="colorOnSecondary">@color/secondaryTextColor</item>
 
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryDark</item>
+        <!--<item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryDark</item>-->
 
         <!-- Customize your theme here. -->
         <item name="fontFamily">@font/lobster_two</item>
         <item name="android:fontFamily">@font/lobster_two</item>
 
         <item name="textAppearanceHeadline6">@style/CustomHeadline6</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="android:windowActionBar">false</item>
+
     </style>
 
     <style name="CustomHeadline6" parent="TextAppearance.MaterialComponents.Headline6">
